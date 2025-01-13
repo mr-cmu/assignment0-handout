@@ -34,7 +34,7 @@ instructions [here](https://docs.github.com/en/authentication/connecting-to-gith
 
 If the cloning still does not work, use
 ```bash
-git clone https://github.com/mr-cmu/assignment1-handout.git
+git clone https://github.com/mr-cmu/assignment0-handout.git
 ```
 
 ## 1.0 Problems (100 points)
