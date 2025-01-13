@@ -48,10 +48,22 @@ class Pose:
     def set_rotation(self, R):
         self.se3[0:3, 0:3] = R
 
-    #TODO
     def compose(self, T):
-        pass
+        """  Return the composition of self.T * T
+        """
 
-    #TODO
+        # TODO: Assignment 1: Problem 1.8
+        return Pose()
+
+    # Take the inverse of a homogeneous transform
     def inverse(self):
-        pass
+        """ Return the inverse of the homogeneous
+                transform
+        
+        Output: 
+            Pose: Pose object that represents the inverse
+                  of  the input
+        """
+
+        # TODO: Assignment 1: Problem 1.9
+        return Pose()
