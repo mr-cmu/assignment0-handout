@@ -1,7 +1,9 @@
 import numpy as np
 import sys
 
-sys.path.append('../')
+import os
+qs_path = os.getcwd()+'/..'
+sys.path.append(qs_path)
 
 from quadrotor_simulator_py.utils import Pose
 from quadrotor_simulator_py.utils import Quaternion
