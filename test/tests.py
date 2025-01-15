@@ -2,7 +2,7 @@ import numpy as np
 import sys
 
 import os
-qs_path = os.getcwd()+'/..'
+qs_path = os.path.dirname(os.path.abspath(__file__))+'/..'
 sys.path.append(qs_path)
 
 from quadrotor_simulator_py.utils import Pose
