@@ -48,6 +48,22 @@ def check_soln(student_soln, correct_soln):
 
     return score
 
+def check_quat_soln(student_soln, correct_soln):
+    score = 0.
+    try:
+        if np.linalg.norm(student_soln-correct_soln) < eps:
+            score += 0.25
+            print('passed')
+        elif np.linalg.norm(student_soln-correct_soln*-1) < eps:
+            score += 0.25
+            print('passed')
+        else:
+            print('failed')
+    except Exception as e:
+            print('failed')
+
+    return score
+
 def test_to_euler_zyx():
     score = 0.
     print(f"to_euler_zyx test 1...", end="")
@@ -191,25 +207,25 @@ def test_to_quat():
     R = R1
     student_soln = np.array(Rot3(R).to_quat().data)
     correct_soln = Quaternion(q1).data
-    score+=check_soln(student_soln,correct_soln)
+    score+= check_quat_soln(student_soln,correct_soln)
 
     print(f"quat test 2...", end="")
     R = R2
     student_soln = np.array([Rot3(R).to_quat().data])
     correct_soln = Quaternion(q2).data
-    score+=check_soln(student_soln,correct_soln)
+    score+= check_quat_soln(student_soln,correct_soln)
 
     print(f"quat test 3...", end="")
     R = R3
     student_soln = np.array([Rot3(R).to_quat().data])
     correct_soln = Quaternion(q3).data
-    score+=check_soln(student_soln,correct_soln)
+    score+= check_quat_soln(student_soln,correct_soln)
 
     print(f"quat test 4...", end="")
     R = R4
     student_soln = np.array([Rot3(R).to_quat().data])
     correct_soln = Quaternion(q4).data
-    score+=check_soln(student_soln,correct_soln)
+    score+= check_quat_soln(student_soln,correct_soln)
     return score
 
 def test_from_quat():
