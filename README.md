@@ -16,7 +16,7 @@ Create a python virtual environment.
 ```python
 python3.8 -m venv .venv
 ```
-Source the environment
+Python 3.6 -- 3.10 have all been tested and confirmed to work (Autolab runs 3.6). Source the environment
 ```python
 source .venv/bin/activate
 ```
